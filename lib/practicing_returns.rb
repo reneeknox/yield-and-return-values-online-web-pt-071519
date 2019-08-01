@@ -1,12 +1,6 @@
 require 'pry'
 
-def hello(array)
-  i = 0
-  collection = []
-  while i < array.length
-  collection << yield(array[i])
-    i += 1
-  end
+
 end
 
 hello(["Tim", "Tom", "Jim"]) { |name| "Hi, #{name}" }
@@ -15,4 +9,10 @@ hello(["Tim", "Tom", "Jim"]) { |name| "Hi, #{name}" }
 # After opening pry up again, "yield(array[i])" was copy/pasted again and entered. This returned, "Hi, Tim".
 #both puts and while returns as nil, but we don't want that. So simply erasing puts creates a return value to put what we yielded into the collection (an empty array, seen on line 5).
 
-# amazing, right? IT'S ALL COMING TOGETHER!!!!!!!!!
+# amazing, right? IT'S ALL COMING TOGETHER!!!!!!!!!def hello(array)
+  i = 0
+  collection = []
+  while i < array.length
+  collection << yield(array[i])
+    i += 1
+  end
